@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body ">
+    <div >
+        <p  id="gl" style="position: relative; left: 500px; top: 60px; font-size:100px;">Google</p>
+        <input type="text" placeholder="Search Google or type URL" style="position: relative; left: 500px; top: -20px; width: 300px; height: 20px; border: 1px solid black ; border-radius: 20px;">
+    </div>
+    <div style="position: relative; left: 100px; top: -300px;">
+    <img src="https://wallpaperaccess.com/full/19693.jpg" style="height: 350px; width: 550px; border: 1px solid white; visibility:hidden;" onclick="spider()" id="spider">
+     &nbsp;&nbsp;&nbsp;
+     
+     <img src="https://dl.midgardtimes.com/images/bpMpt.jpg" style="height:350px; width: 550px; border: 1px solid white; visibility:hidden;" onclick="jl()" id="jl">
+     &nbsp;
+     <br>
+     <br>
+     <img src="https://c4.wallpaperflare.com/wallpaper/296/400/37/movie-avengers-infinity-war-black-panther-movie-black-widow-wallpaper-preview.jpg" style="height: 350px; width: 550px; border: 1px solid white; visibility:hidden;" onclick="avenger()" id="avenger">
+     &nbsp;&nbsp;&nbsp;
+     <img src="https://c4.wallpaperflare.com/wallpaper/703/83/723/star-wars-star-wars-episode-iii-the-revenge-of-the-sith-jedi-sith-wallpaper-preview.jpg" style="height: 350px; width: 550px; border: 1px solid white; visibility:hidden;" onclick="starwar()" id="starwar" >
+     <button id="hide" onclick="hide()" style="visibility: hidden;">Set</button>
+     <button onclick="show()" id="show" style=" position: relative; right: 200px; bottom: 200px; ">Change</button>
+
+    </div>
+    </body>
+</html>
+<script>
+
+    function show(){
+        document.getElementById("spider").style.visibility="visible";
+        document.getElementById("jl").style.visibility="visible";
+        document.getElementById("avenger").style.visibility="visible";
+        document.getElementById("starwar").style.visibility="visible";
+        document.getElementById("hide").style.visibility="visible";
+        document.getElementById("show").style.visibility="hidden";
+
+    }
+    function hide(){
+        document.getElementById("spider").style.visibility="hidden";
+        document.getElementById("jl").style.visibility="hidden";
+        document.getElementById("avenger").style.visibility="hidden";
+        document.getElementById("starwar").style.visibility="hidden";
+        document.getElementById("hide").style.visibility="hidden";
+        document.getElementById("show").style.visibility="visible";
+        document.getElementById("gl").style.color="white";
+    }
+    function spider(){
+        document.body.style.backgroundImage="url('https://wallpaperaccess.com/full/19693.jpg')";
+        document.body.style.backgroundSize="cover";
+        document.getElementById("spider").style.visibility="hidden";
+        document.getElementById("jl").style.visibility="visible";
+        document.getElementById("avenger").style.visibility="visible";
+        document.getElementById("starwar").style.visibility="visible";
+    }
+    function jl(){
+        document.body.style.backgroundImage="url('https://dl.midgardtimes.com/images/bpMpt.jpg')";
+        document.body.style.backgroundSize="cover";
+        document.getElementById("spider").style.visibility="visible";
+        document.getElementById("jl").style.visibility="hidden";
+        document.getElementById("avenger").style.visibility="visible";
+        document.getElementById("starwar").style.visibility="visible";
+    }
+    function avenger(){
+        document.body.style.backgroundImage="url('https://c4.wallpaperflare.com/wallpaper/296/400/37/movie-avengers-infinity-war-black-panther-movie-black-widow-wallpaper-preview.jpg')";
+        document.body.style.backgroundSize="cover";
+        document.getElementById("spider").style.visibility="visible";
+        document.getElementById("jl").style.visibility="visible";
+        document.getElementById("avenger").style.visibility="hidden";
+        document.getElementById("starwar").style.visibility="visible";
+    }
+
+    function starwar(){
+        document.body.style.backgroundImage="url('https://c4.wallpaperflare.com/wallpaper/703/83/723/star-wars-star-wars-episode-iii-the-revenge-of-the-sith-jedi-sith-wallpaper-preview.jpg')";
+        document.body.style.backgroundSize="cover";
+        document.getElementById("spider").style.visibility="visible";
+        document.getElementById("jl").style.visibility="visible";
+        document.getElementById("avenger").style.visibility="visible";
+        document.getElementById("starwar").style.visibility="hidden";
+    }
+</script>

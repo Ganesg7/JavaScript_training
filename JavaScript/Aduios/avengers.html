@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://s3-us-west-2.amazonaws.com/tabs.web.media/9/8/9826/9826-square-400.jpg" style="height: 200px; width: 200px;" onclick="avenger()" id="aveng">
+    <audio src="Audios/Avengers.mp3" id="avengers"></audio>
+</body>
+</html>
+<script>
+var avengeraudio=document.getElementById("avengers");
+var num=0;
+var inc=1;
+var inter=0;
+function avenger(){
+    avengeraudio.play();
+    document.getElementById("aveng").style.visibility="hidden";
+    clearInterval(inter);
+    inter=setInterval(background,1000);
+}
+
+function background(){
+    if(num==0){
+    
+        document.body.style.backgroundImage="url('https://cdn.britannica.com/30/182830-050-96F2ED76/Chris-Evans-title-character-Joe-Johnston-Captain.jpg')"
+        num+=inc;
+    }
+    else if(num==1){
+        document.body.style.backgroundImage="url('https://img.mensxp.com/media/content/2020/Sep/header-credit-Marvel-Studios_5f741da26f175.jpeg')"
+        num+=inc;
+    }
+    else if(num==2){
+        document.body.style.backgroundImage="url('https://media.wired.com/photos/59330ed94cd5ce6f96c0c2c5/master/pass/gallery3.jpg')"
+        num+=inc;
+    }
+
+    else if(num==3){
+        document.body.style.backgroundImage="url('https://miro.medium.com/max/1400/1*jWdTp6xnXqB0rmlO1PAuug.jpeg')"
+        num+=inc;
+    }
+    else if(num==4){
+        document.body.style.backgroundImage="url('https://images.hindustantimes.com/img/2021/09/02/1600x900/black_widow_movie_review_1630582676488_1630582687311.jpeg')"
+        num+=inc;
+    }
+
+    else if(num==5){
+        document.body.style.backgroundImage="url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/hawkeye-1625763406.jpeg')"
+        num+=inc;
+    }
+    else if(num==6){
+        document.body.style.backgroundImage="url('https://cdn.mos.cms.futurecdn.net/BKoXTTA8ywWiBCqWt5E9FK.jpg')"
+        num+=inc;
+    }
+
+    else if(num==7){
+        document.body.style.backgroundImage="url('https://metro.co.uk/wp-content/uploads/2018/03/coulson.jpg?quality=90&strip=all')"
+        num+=inc;
+    }
+    else if(num==8){
+        document.body.style.backgroundImage="url('https://hips.hearstapps.com/digitalspyuk.cdnds.net/16/42/1476791949-static1squarespace.png?resize=480:*')"
+        num+=inc;
+    }
+
+    else if(num==9){
+        document.body.style.backgroundImage="url('https://media.newyorker.com/photos/5a875e3f33aebd0cab9bab12/master/pass/Brody-Passionate-Politics-Black-Panther.jpg')"
+        num+=inc;
+    }
+    else if(num==10){
+        document.body.style.backgroundImage="url('https://imgsrc.cineserie.com/2021/01/spider-man-3-le-film-devoile-ses-premieres-images-du-tournage-10.jpg?ver=1')"
+        num+=inc;
+    }
+
+    else if(num==11){
+        document.body.style.backgroundImage="url('https://cdn.vox-cdn.com/thumbor/liIburSYsQG74WVtkIADQqmatxo=/0x0:976x405/1200x800/filters:focal(386x65:542x221)/cdn.vox-cdn.com/uploads/chorus_image/image/68993990/bucky_cap.0.jpg')"
+        num+=inc;
+    }
+    else if(num==12){
+        document.body.style.backgroundImage="url('https://cdn.vox-cdn.com/thumbor/n1ad23hZrumsQ8gdXQ3yAyPYn8U=/0x0:1400x787/1200x800/filters:focal(405x89:629x313)/cdn.vox-cdn.com/uploads/chorus_image/image/63686080/lag0835_v074.1004_wide_6038893c740ea664a676ebc5d8160b22c02ad616.0.jpg')"
+        num+=inc;
+    }
+
+    else if(num==13){
+        document.body.style.backgroundImage="url('https://www.themarysue.com/wp-content/uploads/2021/01/wanda-scarlet-witch-elizabeth-olsen-marvel-avengers-infinity-war.jpg')"
+        num+=inc;
+    }
+    else if(num==14){
+        document.body.style.backgroundImage="url('https://cdn.mos.cms.futurecdn.net/fhbwWnM2j5PA9GdcQ3ZzPW.jpg')"
+        num+=inc;
+    }
+
+    else if(num==15){
+        document.body.style.backgroundImage="url('https://static1.colliderimages.com/wordpress/wp-content/uploads/2021/09/doctor-strange-benedict-cumberbatch-social.jpg')"
+        num+=inc;
+    }
+    else if(num==16){
+        document.body.style.backgroundImage="url('https://i.insider.com/6128524180be940019b9e8cc?width=700')"
+        num+=inc;
+    }
+}
+</script>

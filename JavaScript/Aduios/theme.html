@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            color: white;
+        }
+
+        img {
+            box-shadow: 0 0 10px white;
+        }
+    </style>
+</head>
+
+<body style="background-color: black;">
+    <table cellpadding=15px>
+        <tr>
+            <td><img src="https://wallpaperaccess.com/full/1680536.jpg"
+                    style="width: 300px; height: 200px; border: 2px solid white;" onclick="avenger()"> <br>
+                AVENGERS </td>
+            <td><img src="https://wallpaperaccess.com/full/813932.jpg"
+                    style="width: 300px; height: 200px; border: 2px solid white;" onclick="spider()"> <br>
+                SPIDER-MAN</td>
+            <td> <img
+                    src="https://assets1.ignimgs.com/2021/04/21/shang-chi-explained-blogroll-1619045382793_160w.jpg?width=1280"
+                    style="width: 300px; height: 200px; border: 2px solid white;" id="cap" onclick="shang()"> <br>
+                SHANG-CHI </td>
+            <td><img src="https://cdn.wallpapersafari.com/35/85/nPwhIg.jpg"
+                    style="width: 300px; height: 200px; border: 2px solid white;" id="iron" onclick="flash()"> <br>
+                FLASH</td>
+
+        </tr>
+        <br> <br>
+        <tr>
+            <td><img src="https://images-na.ssl-images-amazon.com/images/I/71okK89W7KL._RI_.jpg"
+                    style="width: 300px; height: 200px; border: 2px solid white;" onclick="mental()"> <br> The Mentalist
+            </td>
+            <td><img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/2556/652556-h"
+                    style="width: 300px; height: 200px; border: 2px solid white;" onclick="starwar()"> <br> STAR WARS
+            </td>
+            <td> <img src="https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/5091/875091-h"
+                    style="width: 300px; height: 200px; border: 2px solid white;" onclick="mando()"> <br> THE
+                MANDALORIAN </td>
+            <td><img src="https://i.pinimg.com/originals/15/40/dd/1540ddea90ba3f5f8beaad87d7a09226.jpg"
+                    style="width: 300px; height: 200px; border: 2px solid white;" onclick="joker()"> <br> THE JOKER
+            </td>
+        </tr>
+    </table>
+
+    <audio src="Audios/Avengers.mp3" id="avenger"></audio>
+    <audio src="Audios/Spider man 3 black suit theme bgm ringtone english bgm whatsapp status_CBR_256k.mp3"
+        id="spider"></audio>
+    <audio src="Audios/ShangChi.mp3" id="shang"></audio>
+    <audio src="Audios/The Flash Ringtone_CBR_256k.mp3" id="flash"></audio>
+
+    <audio src="Audios/The mentalist theme music whatsapp status_CBR_256k.mp3" id="mental"></audio>
+    <audio src="Audios/Star Wars The Clone Wars Main Title Original Kevin Kiner_CBR_256k.mp3" id="clone"></audio>
+    <audio src="Audios/StarWarsMandalorian.mp3" id="mando"></audio>
+    <audio src="Audios/Joker Dance WhatsApp status_stereo_95k.m4a" id="joker"></audio>
+</body>
+
+</html>
+<script>
+    var avengeraudio = document.getElementById("avenger");
+    var spideraudio = document.getElementById("spider");
+    var shangaudio = document.getElementById("shang");
+    var flashaudio = document.getElementById("flash");
+
+    var mentalaudio = document.getElementById("mental");
+    var cloneaudio = document.getElementById("clone");
+    var mandoaudio = document.getElementById("mando");
+    var jokeraudio = document.getElementById("joker");
+
+    function avenger() {
+        avengeraudio.play();
+        spideraudio.pause();
+        shangaudio.pause();
+        flashaudio.pause();
+        mentalaudio.pause();
+        cloneaudio.pause();
+        mandoaudio.pause();
+        jokeraudio.pause();
+    }
+
+    function spider() {
+        avengeraudio.pause();
+        spideraudio.play();
+        shangaudio.pause();
+        flashaudio.pause();
+        mentalaudio.pause();
+        cloneaudio.pause();
+        mandoaudio.pause();
+        jokeraudio.pause();
+    }
+    function shang() {
+        avengeraudio.pause();
+        spideraudio.pause();
+        shangaudio.play();
+        flashaudio.pause();
+        mentalaudio.pause();
+        cloneaudio.pause();
+        mandoaudio.pause();
+        jokeraudio.pause();
+    }
+    function flash() {
+        avengeraudio.pause();
+        spideraudio.pause();
+        shangaudio.pause();
+        flashaudio.play();
+        mentalaudio.pause();
+        cloneaudio.pause();
+        mandoaudio.pause();
+        jokeraudio.pause();
+    }
+
+    function mental(){
+        avengeraudio.pause();
+        spideraudio.pause();
+        shangaudio.pause();
+        flashaudio.pause();
+        mentalaudio.play();
+        cloneaudio.pause();
+        mandoaudio.pause();
+        jokeraudio.pause();
+
+    }
+    function starwar(){
+        avengeraudio.pause();
+        spideraudio.pause();
+        shangaudio.pause();
+        flashaudio.pause();
+        mentalaudio.pause();
+        cloneaudio.play();
+        mandoaudio.pause();
+        jokeraudio.pause();
+    }
+
+    function mando(){
+        avengeraudio.pause();
+        spideraudio.pause();
+        shangaudio.pause();
+        flashaudio.pause();
+        mentalaudio.pause();
+        cloneaudio.pause();
+        mandoaudio.play();
+        jokeraudio.pause();
+    }
+    function joker(){
+        avengeraudio.pause();
+        spideraudio.pause();
+        shangaudio.pause();
+        flashaudio.pause();
+        mentalaudio.pause();
+        cloneaudio.pause();
+        mandoaudio.pause();
+        jokeraudio.play();
+    }
+</script>

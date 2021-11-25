@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="text">
+    <button onclick="sub()">Submit</button>
+
+    <br> <br>
+    <input type="checkbox" name="ch1" id="ch1" value="Marvel">Marvel</input>
+    <input type="checkbox" name="ch2" id="ch2" value="DC">DC</input>
+    <button type="submit" onclick="ch()">function</button>
+    <br>
+    <br>
+
+    <select name="comic" id="comic">
+        <option value="Iron Man">Iron Man</option>
+        <option value="Spiderman">Spider-Man</option>
+        <option value="Batman">Batman</option>
+        <option value="Superman">Superman</option>
+    </select>
+
+    <button type="submit" onclick="comic()">Heros</button>
+
+    <br> <br>
+
+    <p>You have Failed This City</p>
+    <p>This is the way</p>
+    <p>Do or Do not ,there is try</p>
+    <p>May The Force Be With You</p>
+    <button type="submit" onclick="colorCh()">Change</button>
+
+    <br> <br>
+    <p class="para" id="p1">Hello Peter</p>
+    <p class="para" id="p2">Hello There</p>
+    <h2 class="para">Vanakkam</h2>
+    <p class="para" id="p3">HELLOO</p>
+    <button type="submit" onclick="changeSt()">Changing</button>
+
+    <br> <br>
+    <form action="welcom.html" onsubmit="return validate()">
+        <input type="text" id="uname" placeholder="Username" />
+        <br> <label id="luser" style="color: red; visibility: hidden;">Enter Username</label> <br>
+        <input type="password" id="pass" placeholder="Password" />
+        <br> <label id="lpass" style="color: red; visibility: hidden;">Enter Password</label>
+        <label id="short" style="color: red; visibility: hidden;">Password Too Short</label> <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <br> <br>
+
+
+    <input type="text" id="usname" placeholder="Username">
+    <br>
+    <label for="usernmae" id="lbuser" style="color: red; visibility: hidden;">Invalid Username</label>
+    <button onclick="regular()">Submit</button>
+
+  <br> <br>
+    <input type="number" id="mnum" placeholder="MobileNumber">
+    <br>
+    <label for="MobileNumber" id="mNumber" style="color: red; visibility: hidden;">Invalid Mobile Number</label>
+    <button onclick="regularMobile()">Submit</button>
+    <br>
+    <br>
+
+    <input type="text" id="email" placeholder="Email">
+    <br>
+    <label for="Email" id="e-mail" style="color: red; visibility: hidden;"></label>
+    <button onclick="email()">Submit</button>
+
+    <br> <br>
+
+    <button onclick="start()" id="start">Start</button>
+    <h2 id="ob">Hello There</h2>
+    <h2 id="sec"></h2>
+    <button onclick="stop()" id="stop">Stop</button>
+
+    <br> 
+    <br>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/160px-Heart_coraz%C3%B3n.svg.png" onmouseout="dec()" onmouseover="inc()" id="img" width="100"/>
+
+    <br> <br>
+    <button onclick="fadeOut()" id="fo">Fade Out</button>
+    <h1 id="fade">Greater Power Comes With Greater Responsibility</h1>
+    <button onclick="fadeIn()" id="fi">Fade In</button>
+
+    <br> <br>
+    <img src="https://media.istockphoto.com/vectors/world-globe-icon-vector-earth-logo-web-global-simbol-illustration-vector-id962186144?k=20&m=962186144&s=170667a&w=0&h=FmUcqc7wEGkT4uh7-lHV4E_xKBe-sDzaAFw9ki0p2NA=" style="position: absolute; top: 100px; left: 300px; height: 300px;" onmouseover="spin()" onmouseout="rotatestop()" id="rotate">
+    
+
+    
+</body>
+
+</html>
+
+<script>
+    function sub() {
+        var str = document.getElementById("text").value;
+        console.log(str);
+
+    }
+
+    function ch() {
+        var chh1 = document.getElementById("ch1");
+        var chh2 = document.getElementById("ch2");
+
+        if (chh1.checked == true && chh2.checked == true)
+            alert(chh1.value + " & " + chh2.value)
+        else if (chh1.checked == true)
+            alert(chh1.value);
+        else if (chh2.checked == true)
+            alert(chh2.value);
+        else
+            alert("No Option Selected");
+    }
+
+    function comic() {
+        var select = document.getElementById("comic");
+        alert(select.options[select.selectedIndex].value)
+    }
+
+    function colorCh() {
+        var pTag = document.getElementsByTagName("p");
+
+        pTag[0].style.color = "blue";
+        pTag[1].style.fontSize = "larger";
+        pTag[2].style.fontWeight = "bolder";
+        pTag[3].style.fontSize = "x-large";
+        pTag[3].style.fontWeight = "bolder";
+    }
+
+    function changeSt() {
+        var ptags = document.getElementsByClassName("para");
+
+        for (var x = 0; x < ptags.length; x++) {
+            if (x % 2 == 0)
+                ptags[x].style.color = "red";
+            else
+                ptags[x].style.color = "green";
+        }
+    }
+
+
+    function validate() {
+        var username = document.getElementById("uname");
+        var password = document.getElementById("pass");
+
+        if (username.value.trim() == "") {
+            //alert("NO blank Values Allowed bro..!!");
+            document.getElementById("luser").style.visibility = "visible";
+            username.style.border = "solid 3px red";
+            return false;
+
+        }
+        else if (password.value.trim() == "") {
+            //alert("NO blank Values Allowed bro..!!");
+            password.style.border = "solid 3px red";
+            document.getElementById("lpass").style.visibility = "visible";
+            return false;
+        }
+        else if (password.value.trim().length < 5) {
+            // alert("Password Too short");
+            document.getElementById("short").style.visibility = "visible";
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+
+    function regular() {
+        var unames = document.getElementById("usname").value;
+        //rxjs=new RegExp("G00","g");
+        //[^a-d] for dont wan't a to d start 
+        var rxjs = /[egp EGP][0-9][a-z A_Z]/;
+        if (rxjs.test(unames)) {
+            alert("Valid Username");
+        }
+        else {
+            //  alert("Invalid Username");
+            document.getElementById("lbuser").style.visibility = "visible";
+        }
+    }
+
+    function regularMobile() {
+        var mobile = document.getElementById("mnum").value;
+        /* 
+        \d match  any digit (equal to [0-9])
+        \w match any word character(a-z,A-Z,0-9 & _)
+        \s match whitesapce chareacter (eg - spaces & tabs)
+        \t match a tab only
+        */
+        var mRegu = /[6-9]\d{9}$/;
+
+        if (mRegu.test(mobile)) {
+            document.getElementById("mNumber").innerHTML = "Valid";
+            document.getElementById("mNumber").style.visibility = "visible";
+            document.getElementById("mNumber").style.color = "green";
+        }
+        else {
+            document.getElementById("mNumber").innerHTML = "Invalid Number";
+            document.getElementById("mNumber").style.visibility = "visible";
+            document.getElementById("mNumber").style.color = "red";
+        }
+    }
+
+    function email() {
+        var email = document.getElementById("email").value;
+        var eReg = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,10})$/;
+        if (eReg.test(email)) {
+            document.getElementById("e-mail").innerHTML = "Valid";
+            document.getElementById("e-mail").style.visibility = "visible";
+            document.getElementById("e-mail").style.color = "green";
+        }
+        else {
+            document.getElementById("e-mail").innerHTML = "Invalid";
+            document.getElementById("e-mail").style.visibility = "visible";
+            document.getElementById("e-mail").style.color = "red";
+        }
+    }
+
+    var id = 0;
+    var seconds = 0;
+    function printMes() {
+        document.getElementById("ob").innerHTML = "Hello Peter";
+        //document.getElementById("sec").innerHTML = seconds;
+        //seconds++;
+    }
+
+    function start() {
+        id=window.setTimeout(printMes,5000);
+        //id = window.setInterval(printMes, 1000);
+    }
+
+    function stop() {
+        window.clearTimeout(id)
+    }
+
+
+
+    var opacity = 0;
+    var intervalID = 0;
+    function fadeOut() {
+        intervalID = setInterval(hide, 200);
+    }
+    function hide() {
+
+        var head = document.getElementById("fade");
+        opacity = Number(window.getComputedStyle(head).getPropertyValue("opacity"));
+
+        if (opacity > 0) {
+            opacity = opacity - 0.1;
+            head.style.opacity = opacity;
+        }
+        else {
+            clearInterval(intervalID);
+
+        }
+    }
+
+
+    function fadeIn(){
+        intervalID=setInterval(show,200);
+    }
+    function show() {
+
+        var head = document.getElementById("fade");
+        document.getElementById("fade").innerHTML="Live To Fight Another Day";
+        opacity = Number(window.getComputedStyle(head).getPropertyValue("opacity"));
+
+        if (opacity < 1) {
+            opacity = opacity + 0.1;
+            head.style.opacity = opacity;
+        }
+        else {
+            clearInterval(intervalID);
+
+        }
+    }
+
+//animation
+
+    var width=100;
+    var diff=2;
+    var setInter=0;
+    function inc(){
+
+        clearInterval(setInter);
+      setInter=setInterval(zoomIn,20);
+    }
+
+    function zoomIn(){
+       if(width<200){
+           width=width+diff;
+           document.getElementById("img").style.width=width+"px";
+           console.log(width);
+       }
+       else{
+           clearInterval(setInter);
+       }
+    }
+
+    function dec(){
+
+        clearInterval(setInter);
+        setInter=setInterval(zoomOut,20);
+    }
+    function zoomOut(){
+        if(width>100){
+           width=width-diff;
+           document.getElementById("img").style.width=width+"px";
+           console.log(width);
+       }
+       else{
+           clearInterval(setInter);
+       }
+    }
+    var degree=0;
+    var inter=0;
+    function spin(){
+
+        clearInterval(inter)
+     inter=setInterval(rotate,30);
+    }
+    function rotate(){
+        if(degree!=1000){
+           degree+=2;
+           document.getElementById("rotate").style.transform="rotate("+degree+"deg)"
+           console.log(degree);
+       }
+       else{
+           clearInterval(inter);
+       }
+    }
+    function rotatestop(){
+        clearInterval(inter)
+    }
+</script>

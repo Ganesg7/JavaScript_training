@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            color: white;
+        }
+
+        img {
+            box-shadow: 0 0 10px white;
+        }
+    </style>
+</head>
+
+<body style="background-color: black;">
+    <table cellpadding=15px>
+        <tr>
+            <td><img src="https://images5.alphacoders.com/559/559956.jpg"
+                    style="width: 300px; height: 200px; border: 2px solid white;" id="avenger" onclick="avg()"> <br>
+                AVENGERS </td>
+            <td><img src="https://images.hdqwalls.com/wallpapers/spiderman-ps4-logo-0p.jpg"
+                    style="width: 300px; height: 200px; border: 2px solid white;" onclick="spider()" id="spider"> <br>
+                SPIDER-MAN</td>
+            <td> <img src="https://wallpapersmug.com/large/7d3853/captain-america-minimal.jpg"
+                    style="width: 300px; height: 200px; border: 2px solid white;" id="cap" onclick="cap()"> <br> CAPTAIN
+                AMERICA </td>
+            <td><img src="https://image.cnbcfm.com/api/v1/image/106882905-1620938530218-sbt-25882_r_Cropped.jpg?v=1620938576"
+                    style="width: 300px; height: 200px; border: 2px solid white;" id="iron" onclick="SHANG()"> <br>
+                SHANG_CHI </td>
+
+        </tr>
+        <br> <br>
+        <tr>
+            <td><img src="https://wallpapercave.com/wp/wp2065134.jpg"
+                    style="width: 300px; height: 200px; border: 2px solid white;" onclick="Thor()"> <br> THOR </td>
+            <td><img src="https://i.pinimg.com/originals/44/e1/e3/44e1e3a22dd5a451420865f6b6cd13b3.jpg"
+                    style="width: 300px; height: 200px; border: 2px solid white;" onclick="hulk()" > <br> HULK</td>
+            <td> <img
+                    src="https://cdn.dribbble.com/users/3691429/screenshots/7374369/media/dd9554fd3a9c302af5d78898a86d7ec2.jpg?compress=1&resize=400x300"
+                    style="width: 300px; height: 200px; border: 2px solid white;" onclick="panter()" > <br> BLACK PANTHER </td>
+            <td><img src="https://www.themarysue.com/wp-content/uploads/2021/07/classic-loki-richard-e-grant.jpg"
+                    style="width: 300px; height: 200px; border: 2px solid white;" onclick="loki()" > <br> CLASSIC LOKI </td>
+        </tr>
+    </table>
+    <audio id="avengers">
+        <source src="audios\Avengersassemble.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="spiderman">
+        <source src="audios\YourFriendlyNeighborhoodSpider.mp3" type="audio/mpeg">
+    </audio>
+    <audio src="Audios/ICANDOTHISALLDAY.mp3" id="captain"></audio>
+
+    <audio src="Audios/ShangchiIs.mp3" id="shang"></audio>
+    <audio src="Audios/Thor.mp3" id="Thor"></audio>
+    <audio src="Audios/HulkImAlwaysAngry.mp3" id="hulk"></audio>
+    <audio src="Audios/blackpanther.mp3" id="panther"></audio>
+    <audio src="Audios/LokiGloriousPurpose.mp3" id="loki"></audio>
+</body>
+
+</html>
+
+<script>
+    var avgaudio = document.getElementById("avengers");
+    var spideraudio = document.getElementById("spiderman");
+    var capaudio = document.getElementById("captain");
+    var shangaudio= document.getElementById("shang");
+
+    var thoraudi0 = document.getElementById("Thor");
+    var hulkaudio = document.getElementById("hulk");
+    var pantheraudio = document.getElementById("panther");
+    var lokiaudio = document.getElementById("loki")
+
+    function avg() {
+        avgaudio.play();
+        capaudio.pause();
+        spideraudio.pause();
+        shangaudio.pause();
+        thoraudi0.pause();
+        hulkaudio.pause();
+        pantheraudio.pause();
+        lokiaudio.pause();
+    }
+
+    function spider() {
+        avgaudio.pause();
+        capaudio.pause();
+        spideraudio.play();
+        shangaudio.pause();
+        thoraudi0.pause();
+        hulkaudio.pause();
+        pantheraudio.pause();
+        lokiaudio.pause();
+    }
+    function cap() {
+
+        avgaudio.pause();
+        spideraudio.pause();
+        capaudio.play();
+        shangaudio.pause();
+        thoraudi0.pause();
+        hulkaudio.pause();
+        pantheraudio.pause();
+        lokiaudio.pause();
+    }
+
+    function SHANG() {
+
+        avgaudio.pause();
+        spideraudio.pause();
+        capaudio.pause();
+        shangaudio.play();
+        thoraudi0.pause();
+        hulkaudio.pause();
+        pantheraudio.pause();
+        lokiaudio.pause();
+    }
+
+    function Thor(){
+        avgaudio.pause();
+        spideraudio.pause();
+        capaudio.pause();
+        shangaudio.pause();
+        thoraudi0.play();
+        hulkaudio.pause();
+        pantheraudio.pause();
+        lokiaudio.pause();
+
+    }
+
+    function hulk(){
+        avgaudio.pause();
+        spideraudio.pause();
+        capaudio.pause();
+        shangaudio.pause();
+        thoraudi0.pause();
+        hulkaudio.play();
+        pantheraudio.pause();
+        lokiaudio.pause();
+    }
+
+    function panter(){
+        avgaudio.pause();
+        spideraudio.pause();
+        capaudio.pause();
+        shangaudio.pause();
+        thoraudi0.pause();
+        hulkaudio.pause();
+        pantheraudio.play();
+        lokiaudio.pause();
+
+    }
+
+    function loki(){
+        avgaudio.pause();
+        spideraudio.pause();
+        capaudio.pause();
+        shangaudio.pause();
+        thoraudi0.pause();
+        hulkaudio.pause();
+        pantheraudio.pause();
+        lokiaudio.play();
+    }
+</script>

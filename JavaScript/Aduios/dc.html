@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+            color: white;
+        }
+        img{
+            box-shadow: 0 0 10px white;
+        }
+      
+      
+    </style>
+</head>
+<body style="background-color: black;">
+    <table cellpadding=15px>
+        <tr>
+            <td><img src="https://www.cnet.com/a/img/TlXZUu-teFOrcdFyD31z2hxe5C0=/1200x675/2021/10/16/11804578-0dbc-42af-bcd1-3bc7b1394962/the-batman-2022-teaser-poster-batman-01-promo.jpg" style="width: 300px; height: 200px; border: 2px solid white;" onclick="batman()"> <br> BATMAN </td>
+            <td><img src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Fjvchamary%2Ffiles%2F2016%2F03%2Fman_of_steel-1200x800.jpg" style="width: 300px; height: 200px; border: 2px solid white;" onclick="superman()"> <br> SUPERMAN</td>
+            <td> <img src="https://m.media-amazon.com/images/M/MV5BZWVhYzE0NzgtM2U1Yi00OWM1LWJlZTUtZmNkNWZhM2VkMDczXkEyXkFqcGdeQW1yb3NzZXI@._V1_.jpg" onclick="wonder()" style="width: 300px; height: 200px; border: 2px solid white;"> <br> WONDER WOMEN </td>
+            <td><img src="https://m.media-amazon.com/images/M/MV5BMTU4ODkzNTA4NF5BMl5BanBnXkFtZTgwMTYzNzMyNjE@._V1_.jpg" style="width: 300px; height: 200px; border: 2px solid white;" onclick="arrow()"> <br> GREEN ARROW </td>
+            
+        </tr>
+        <br> <br>
+        <tr>
+            <td><img src="https://wallpaperaccess.com/full/44157.jpg" onclick="latern()" style="width: 300px; height: 200px; border: 2px solid white;"> <br> GREEN LANTERN </td>
+            <td><img src="https://hbomax-images.warnermediacdn.com/images/GYJB-UAPXG4rDKgEAAAAC/tile?size=640x360&partner=hbomaxcom&v=01320580b93ec9e69c8a503cf7606fe9&host=artist.api.cdn.hbo.com" onclick="shazam()" style="width: 300px; height: 200px; border: 2px solid white;"> <br> SHAZAM</td>
+            <td> <img src="https://imgix.bustle.com/uploads/image/2021/7/20/643a69bb-e80e-4778-ade2-b57fb82c8897-screen-shot-2021-07-20-at-32723-pm.png?w=800&fit=crop&crop=focalpoint&auto=format%2Ccompress&fp-x=0.3933&fp-y=0.3786" onclick="flash()" style="width: 300px; height: 200px; border: 2px solid white;"> <br> THE FLASH </td>
+            <td><img src="https://m.media-amazon.com/images/M/MV5BZDhiZTBhYjgtZjU2Yy00MTZiLWJmYzEtMDZkZWQyNjIyNmFiXkEyXkFqcGdeQWFybm8@._V1_.jpg" style="width: 300px; height: 200px; border: 2px solid white;" onclick="peace()" > <br>PEACE-MAKER </td>
+        </tr>
+    </table>
+    <audio src="Audios/I Am Vengeance I Am The Night I Am Batman_CBR_256k.mp3" id="batman"></audio>
+    <audio src="Audios/ManofSteel.mp3" id="super"></audio>
+    <audio src="Audios/WonderWoman.mp3" id="wonder"></audio>
+    <audio src="Audios/Arrow.mp3" id="arrow"></audio>
+    <audio src="Audios/GreenLanternCorpsOath.mp3" id="latern"></audio>
+    <audio src="Audios/Shazam.mp3" id="shazam"></audio>
+    <audio src="Audios/BarryAllen.mp3" id="flash"></audio>
+    <audio src="Audios/Peacemakers.mp3" id="peace"></audio>
+</body>
+</html>
+<script>
+    var batmanaudio=document.getElementById("batman");
+    var superaudio=document.getElementById("super");
+    var wonderaudio=document.getElementById("wonder");
+    var arrowaudio=document.getElementById("arrow");
+
+    var laternaudio=document.getElementById("latern");
+    var shazamaudio=document.getElementById("shazam");
+    var flashaudio=document.getElementById("flash");
+    var peaceaudio=document.getElementById("peace");
+
+
+
+
+
+    function batman(){
+        batmanaudio.play();
+        superaudio.pause();
+        wonderaudio.pause();
+        arrowaudio.pause();
+        laternaudio.pause();
+        shazamaudio.pause();
+        flashaudio.pause();
+        peaceaudio.pause();
+    }
+
+    function superman(){
+        batmanaudio.pause();
+        superaudio.play();
+        wonderaudio.pause();
+        arrowaudio.pause();
+        laternaudio.pause();
+        shazamaudio.pause();
+        flashaudio.pause();
+        peaceaudio.pause();
+    }
+    function wonder(){
+        batmanaudio.pause();
+        superaudio.pause();
+        wonderaudio.play();
+        arrowaudio.pause();
+        laternaudio.pause();
+        shazamaudio.pause();
+        flashaudio.pause();
+        peaceaudio.pause();
+    }
+
+    function arrow(){
+        batmanaudio.pause();
+        superaudio.pause();
+        wonderaudio.pause();
+        arrowaudio.play();
+        laternaudio.pause();
+        shazamaudio.pause();
+        flashaudio.pause();
+        peaceaudio.pause();
+    }
+
+    function latern(){
+        batmanaudio.pause();
+        superaudio.pause();
+        wonderaudio.pause();
+        arrowaudio.pause();
+        laternaudio.play();
+        shazamaudio.pause();
+        flashaudio.pause();
+        peaceaudio.pause();
+    }
+
+    function shazam(){
+        batmanaudio.pause();
+        superaudio.pause();
+        wonderaudio.pause();
+        arrowaudio.pause();
+        laternaudio.pause();
+        shazamaudio.play();
+        flashaudio.pause();
+        peaceaudio.pause();
+    }
+
+    function flash(){
+        batmanaudio.pause();
+        superaudio.pause();
+        wonderaudio.pause();
+        arrowaudio.pause();
+        laternaudio.pause();
+        shazamaudio.pause();
+        flashaudio.play();
+        peaceaudio.pause();
+    }
+    function peace(){
+
+        batmanaudio.pause();
+        superaudio.pause();
+        wonderaudio.pause();
+        arrowaudio.pause();
+        laternaudio.pause();
+        shazamaudio.pause();
+        flashaudio.pause();
+        peaceaudio.play();
+    }
+</script>

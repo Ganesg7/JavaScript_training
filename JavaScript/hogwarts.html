@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogwarts</title>
+</head>
+<body>
+    <div style="position: absolute; top: 100px; left: 450px;">
+        <img src="https://static.wikia.nocookie.net/harrypotter/images/6/62/Sorting_Hat.png/revision/latest?cb=20161120072849" style="height: 400px; width: 400px;" id="sortingHat" onclick="sorting()">
+    </div>
+    <div >
+
+        <audio id="Gryffindor">
+            <source src="audios\Gryffindor.mp3" type="audio/mpeg">  
+          </audio>
+          <audio id="Slytherin">
+            <source src="audios\Slytherin.mp3" type="audio/mpeg">  
+          </audio>
+          <audio id="Ravenclaw">
+            <source src="audios\Ravenclaw.mp3" type="audio/mpeg">  
+          </audio>
+          <audio id="Hufflepuff">
+            <source src="audios\Hufflepuff.mp3" type="audio/mpeg">  
+          </audio>
+    </div>
+</body>
+</html>
+
+<script>
+function sorting(){
+    let random=Math.random() * 4;
+    console.log(random);
+    let num=Math.floor(random);
+    console.log(num);
+    var GryffindorAudio = document.getElementById("Gryffindor");
+    var SlytherinAudio= document.getElementById("Slytherin");
+    var RavenclawAudio= document.getElementById("Ravenclaw");
+    var HufflepuffAudio= document.getElementById("Hufflepuff");
+    if(num==0){
+        GryffindorAudio.play();
+    document.body.style.backgroundImage="url('https://logos-world.net/wp-content/uploads/2021/08/Gryffindor-Emblem.png')"
+    document.body.style.backgroundSize="700px";
+    document.body.style.backgroundRepeat="no-repeat";
+    document.getElementById("sortingHat").style.visibility="hidden";
+    }
+    else if(num==1){
+        SlytherinAudio.play();
+    document.body.style.backgroundImage="url('https://www.redwolf.in/image/catalog/stickers/harry-potter-slytherin-crest-sticker-india.jpg')"
+    document.body.style.backgroundSize="700px";
+    document.body.style.backgroundRepeat="no-repeat";
+    document.getElementById("sortingHat").style.visibility="hidden";
+    }
+    else if(num==2){
+        RavenclawAudio.play();
+        document.body.style.backgroundImage="url('https://www.redwolf.in/image/catalog/stickers/harry-potter-ravenclaw-crest-sticker-india.jpg')"
+        document.body.style.backgroundSize="700px";
+        document.body.style.backgroundRepeat="no-repeat";
+        document.getElementById("sortingHat").style.visibility="hidden";
+        }
+    else if(num==3){
+        HufflepuffAudio.play();
+        document.body.style.backgroundImage="url('https://www.redwolf.in/image/catalog/stickers/harry-potter-hufflepuff-crest-sticker-india.jpg')"
+        document.body.style.backgroundSize="700px";
+        document.body.style.backgroundRepeat="no-repeat";
+        document.getElementById("sortingHat").style.visibility="hidden";
+        }
+    
+}
+</script>

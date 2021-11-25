@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    <p id="one" style="color: red; font-size: x-large;">You Have Failed This City...!!!</p>
+    <button onclick="changeFun()">Change</button>
+
+    <h3 id="two" >Orange</h3>
+</body>
+
+</html>
+<script type="text/javascript">
+    //this comment
+
+    document.write("<h2 style='color:red;'>Hello Peter</h2>");
+    document.write("<h3 style='background-color:red;color:white; width:150px'>Spider-Man</h3>");
+    document.write(`<hr>
+    <samp>Do or Do not, there is no try</samp>
+    `);
+    var num = 5;
+    var num1 = 7;
+    var name = "Peter Parker";
+    var flag = false;
+    document.write("<br>")
+    document.write(num);
+    document.write("<br>")
+    document.write("Result is =" + num + num1);
+    var res = num + num1;
+    document.write("<br>")
+    document.write("Oringal Res is " + res);
+
+    document.write("<br>");
+    var i = 0;
+    for (i = 0; i < 25; i += 2) {
+        document.write(i + "&nbsp;");
+
+    }
+
+    var n = -65;
+    if (n % 2 == 0) {
+        document.write(n + " EVEN number");
+        document.write("<br>")
+    }
+    else if (n < 0) {
+        document.write("<h2>" + n + "Negative Number</h2>")
+    }
+    else {
+        document.write(n + " ODD number");
+        document.write("<br>")
+    }
+
+    var day = 2;
+    switch (day) {
+        case 1:
+            document.write("<h2>Sunday</h2>");
+            break;
+        case 2:
+            document.write("<h2>Monday</h2>");
+
+        case 3:
+            document.write("<h2>Tuesday</h2>");
+            break;
+        case 4:
+            document.write("<h2>Sunday</h2>");
+            break;
+        default:
+            document.write("<h2>Invalided Choice</h2>")
+    }
+
+    var x = 1;
+    while (x < 10) {
+        document.write("<h3>" + x + "</h3>");
+        x += 2;
+    }
+
+    function add2Number(a, b) {
+        var total = a + b;
+        document.write("<h3>The Total is: " + total + "</h3>")
+    }
+    add2Number(232, 244);
+    add2Number("Bruce", "Wayne");
+
+    var name1 = ["Ganesh", "Pandi", "Barry", "Allen"];
+
+    name1.push("Tony");
+    name1.push("Stark");
+    name1.push("Oliver");
+    name1.push(83);
+    for (var i = 0; i < name1.length; i++) {
+        document.write("<h2>" + name1[i] + "</h2>");
+    }
+
+
+    var Car = {
+        cars_brand: "Tesla",
+        car_model: "Model 3",
+        price: 350000,
+
+        teslaAutopilot: function () {
+            document.write("<h2>This Car has Auto pilot</h2>")
+        }
+    }
+    document.write("Car Name " + Car.car_model);
+
+    function Cars(cars_brands, car_models, car_price) {
+        this.cars_brands = cars_brands;
+        this.car_models = car_models;
+        this.car_price = car_price;
+        this.teslaAuto = function () {
+            document.write("<h2>Car Has AUto pilot Mode</h2>")
+        }
+    }
+
+    var c1 = new Cars("Tesla", "Model 4", 9876532);
+    var c2 = new Cars("TaTa", "Saferi", 982345432);
+    c1.teslaAuto();
+    document.write("<h2>" + c2.car_models + " " + c2.cars_brands + " " + c2.car_price);
+
+    console.log(name1);
+    console.log(typeof num1);
+    console.log(typeof name);
+    console.log(typeof name1);
+    numbr = 877;
+    string = "Peter Parker";
+    document.write("<h2>" + numbr + "</h2>");
+    document.write("<h2>" + string + "</h2>");
+
+    
+    var fname = "Obi-Wan";
+    var lname = "Kenobi";
+    var fullname = fname + " " + lname;
+    document.write("<h1 style='color:red;'>" + fullname + "</h1>");
+    console.log(fullname);
+
+    var mark1 = 98;
+    var mark2 = 87;
+    var mark3 = 99;
+    var sum = mark1 + mark2 + mark3;
+    var avg = sum / 3;
+    document.write("<h2> Sum: " + sum + "</h2>");
+    document.write("<h2> Avgerge: " + avg + "</h2>");
+    document.write("<h2> Avgerge in Round: " + Math.round(avg) + "</h2>");
+    console.log(avg);
+    console.log(parseFloat(sum));
+    console.log(parseInt(avg));
+    console.log(Math.round(avg));
+
+    var today = Date();
+    document.write(today);
+
+    function changeFun() {
+        document.getElementById("one").innerHTML = "This Is The Way";
+        document.getElementById("one").style.color = "blue";
+   }
+
+    var res = isNaN(num1);
+    var Res = isNaN(name);
+    document.write(res + Res);
+
+    var nm = prompt("Please Enter Your name");
+
+    document.write("<h2>" + nm + "</h2>");
+    var n3, n4, n5;
+
+    n3 = parseInt(prompt("Enter the Value of Number 1"));
+    n4 = parseInt(prompt("Enter the Value of Number 2"));
+    n5 = n3 + n4;
+    document.write("<h2>" + n5 + "</h2>");
+
+
+    var response;
+    response = confirm("Do You Want Continue");
+    if (response == true) {
+        document.write("<h2>You Have Failed This City</h2>")
+    }
+    else {
+        document.write("<h2>This is the Way</h2>");
+    }
+    let array = [23, 876, 232, "Luck", "Skywalker"];
+    array.push("Obiwan");
+    array.shift();
+    array.unshift("Ben");
+    array.unshift("Logan");
+    array.splice(2, 2);
+    array.push("Kenobi");
+    array.push("Jar Jar");
+    array.pop();
+    document.write("<h3>" + array.slice(10, 16) + "</h3>");
+    for (var j = 0; j < array.length; j++) {
+        if (j % 2 == 0) {
+            document.write("<h3 style='color:red'>" + array[j] + "</h3>");
+        }
+        else {
+            document.write("<h3>" + array[j] + "</h3>");
+        }
+    }
+
+</script>
